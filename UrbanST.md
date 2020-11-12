@@ -27,26 +27,26 @@ DataFormat = {
 
 在uctb里新起一块把spatio temporal prediction的所有dataset抽象出一种通用的以纯文本文件形式存储的数据格式（我们现在用的pickle我感觉还是不太直观，因为必须用程序打开才能看。我觉得比较好的数据集的方式还是要纯文本），而且要比较灵活的可以后续进一步把一些场景融入，比如说graph可以动态变化。然后我们不同的数据集之间的关系，就可以想象称MINIST和fashion-MINIST的关系，比如我可以直接替换一个数据集的目录，所有其他的代码都不用变，我就可以重新run一个实验。原来pickle虽然也可以实现这个功能，但是不能直接用文本文件打开是个很大的问题。
 
-我现在觉得我们需要一个文件夹，然后一个目录是data，每个站点序号一个文件，文件里就是存某种flow，第一列是时间，第二列是值，然后有一个文件夹是graph，存不同类型的graph的邻接表，第三个文件夹是external，包括天气、站点位置等。你看看能不能按这个思路组织一下目录结构，然后用某个数据集的一部分时间做个例子帮忙弄一下？
+我现在觉得我们需要一个文件夹，然后一个目录是data，每个站点序号一个文件，文件里就是存某种flow，第一列是时间，第二列是值，然后有一个文件夹是graph，存不同类型的graph的邻接表，第三个文件夹是external，包括天气、站点位置等。按这个思路组织一下目录结构，然后用某个数据集的一部分时间做个例子
 
 ## 通用数据集方案
 
 | 文件夹/文件夹 |           **内容**            |             **聚合后维度**              | 文件格式 |
 | :-----------: | :---------------------------: | :-------------------------------------: | :------: |
-|    ST Data    |         存储时空数据          | [time_slots, number_node, feature_dims] | csv+txt  |
+|    ST Data    |         存储时空数据          | [time_slots, number_node, feature_dims] |   csv    |
 |    Context    |         存储外部数据          | [time_slots, number_node, feature_dims] |   csv    |
 |     Graph     |          存储动态图           | [time_steps, number_node, number_node]  |   csv    |
 |   README.md   | 数据集的相关信息, 来源/引用等 |                    /                    | markdown |
 
 ### ST Data
 
-Crowd flow可能有多种，经过转化后的`ST tensor`应该具有如下维度[time_slots, number_node, feature_dims]，但为求直观，我们不应该直接存tensor，而是应该存matrix，通常情况下，number_node(节点数量)是大于feature_dims(flow的类型，例如inflow和outflow)，因此我们将一个csv存储一种flow，命名为`XXX_flow.txt`，行代表timestamp，列代表站点序号.
+Crowd flow可能有多种，经过转化后的`ST tensor`应该具有如下维度[time_slots, number_node, feature_dims]，但为求直观，我们不应该直接存tensor，而是应该存matrix，通常情况下，number_node(节点数量)是大于feature_dims(flow的类型，例如inflow和outflow)，因此我们将一个csv存储一种flow，命名为`XXX_stdata.txt`，行代表timestamp，列代表站点序号.
 
-站点信息存储在station.txt中，有以下四类(列)信息，第一列是序号(与Crowd flow对应)，二三列是维度、经度，第四列是留待扩展的信息(每个数据集自定义的信息)
+站点信息存储在`spatial_node.csv`中，有以下四类(列)信息，第一列是序号(与Crowd flow对应)，二三列是维度、经度，第四列是留待扩展的信息(每个数据集自定义的信息)
 
 ```
-INDEX	latitude	longitude	[other]
-1	34.156	116.372	other
+	latitude	longitude	[other]
+S1	34.156		116.372		other
 ```
 
 ST DATA文件夹主要有两类信息：
@@ -138,7 +138,7 @@ TIME	P1_TO_LAPTOP	P1_TO_P1	P1_TO_P2	P1_TO_P3	P1_TO_P4	P1_TO_P5	P1_TO_P6
         station.txt
 ```
 
-<font color="red">**数据尚未填充，等格式敲定了再填充.**</font>
+
 
 ------
 
