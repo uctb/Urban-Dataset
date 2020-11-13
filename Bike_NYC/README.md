@@ -12,9 +12,9 @@ The bikesharing datasets are collected from [U.S. open data portals](https://www
 │      station_list.csv
 │
 ├─Graph
-│      correlation_network.csv
-│      distance_network.csv
-│      interaction_network.csv
+│      correlation_graph.csv
+│      distance_graph.csv
+│      interaction_graph.csv
 │
 └─STData
         demand_stdata.csv
@@ -42,21 +42,28 @@ Bike demand data is a kind of spatiotemporal data and thus stored in `STData` su
 
 `Graph` directory stores different types of graph information that can represent diverse correlation among stations. For the Bike NYC  dataset, we build three graphs, namely distance, correlation and interaction and store them in following files.
 
-* `distance_network.csv`
-* `correlation_network.csv`
-* `interaction _network.csv`
+* `distance_graph.csv`
+* `correlation_graph.csv`
+* `interaction_graph.csv`
 
-Distance graph reflects the spatial distances among different stations, we build it by calculating the euclidean distance (e.g. if the distance $d_{a.b}$ between node $a$ and node $b$ is larger than a given threshold, the adjacent matrix will be set to 1, otherwise it will be set to 0). Correlation graph is built by calculating the pearson correlation coefficient and interaction graph is built by counting the monthly interaction flow.
-
-The network file is like this：
+Distance graph reflects the spatial distances among different stations, we build it by calculating the euclidean distance (e.g. if the distance $d_{a.b}$ between node $a$ and node $b$ is larger than a given threshold, the adjacent matrix will be set to 1, otherwise it will be set to 0). Correlation graph is built by calculating the pearson correlation coefficient and interaction graph is built by counting the monthly interaction flow. The graph file is like this：
 
 ```
-	S0_TO_S0	S0_TO_S1	S0_TO_S2	...
-[Time]	0	0	0	0	0	0	0	...
-
+	start	end	weight
+static	S_0	S_22	1
+static	S_0	S_41	1
+static	S_0	S_52	1
+static	S_0	S_67	1
+static	S_0	S_99	1
+static	S_0	S_104	1
+static	S_0	S_135	1
+static	S_0	S_141	1
+static	S_0	S_142	1
+static	S_0	S_157	1
+...
 ```
 
-The columns of network file denote the weight between two stations and the row index represent time horizon which means the graph can be temporally dynamic. Note that the graph also can be static when the row index is `static`.
+The last column of network file denote the weight between start station and end station. The row index represent time horizon which means the graph can be temporally dynamic. Note that the graph also can be static when the row index is `static`.
 
 ## Context Data
 
