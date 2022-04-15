@@ -50,7 +50,7 @@ The bikesharing datasets are collected from U.S. open data portals including New
 
 Following shows the map-visualization of bike stations in NYC, Chicago and DC.
 
-<img src="https://uctb.github.io/UCTB/sphinx/md_file/src/image/Bike_NYC.jpg" style="zoom:30%;height:800px;width:800px;" /> <img src="https://uctb.github.io/UCTB/sphinx/md_file/src/image/Bike_Chicago.jpg" style="zoom:30%;height:800px;width:800px;"/> <img src="https://uctb.github.io/UCTB/sphinx/md_file/src/image/Bike_DC.jpg" style="zoom:30%;height:800px;width:800px;" />
+<img src="https://uctb.github.io/UCTB/sphinx/md_file/src/image/Bike_NYC.jpg" style="zoom: 30%; height: 800px; width: 800px;" /> <img src="https://uctb.github.io/UCTB/sphinx/md_file/src/image/Bike_Chicago.jpg" style="zoom: 30%; height: 800px; width: 800px;"/> <img src="https://uctb.github.io/UCTB/sphinx/md_file/src/image/Bike_DC.jpg" style="zoom: 30%; height: 800px; width: 800px;" />
 
 
 
@@ -86,7 +86,7 @@ The two traffic speed datasets are widely used in STTP research: METR-LA and PEM
 
 Following shows the map-visualization of grid-based ride-sharing stations in METR-LA and PEMS-BAY.
 
-<img src="https://uctb.github.io/UCTB/sphinx/md_file/src/image/METR_LA.png" style="zoom:30%;height:800px;width:800px;" /> <img src="https://uctb.github.io/UCTB/sphinx/md_file/src/image/PEMS_BAY.png" style="zoom:30%;height:800px;width:800px;"/> 
+<img src="https://uctb.github.io/UCTB/sphinx/md_file/src/image/METR_LA.png" style="zoom: 33%; height: 800px; width: 800px;" /> <img src="https://uctb.github.io/UCTB/sphinx/md_file/src/image/PEMS_BAY.png" style="zoom: 33%; height: 800px; width: 800px;"/> 
 
 **5-minutes granularity data catalog**: https://github.com/uctb/Urban-Dataset/tree/main/Public_Datasets/Speed/5_minutes
 
