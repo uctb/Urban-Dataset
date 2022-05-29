@@ -60,15 +60,15 @@ Following shows the map-visualization of bike stations in NYC, Chicago and DC.
 
 Following lists the detail of the datasets:
 
-|        **5-minutes**        | **New York City** |   **Chicago**   |     **DC**      |   **METR_LA**   |     **PEMS_BAY**      |
-| :----------------------: | :---------------: | :-------------: | :-------------: | :-------------: | :-------------: |
-|        TimeRange         |  2013.07.01-2017.09.30  | 2013.07.01-2017.09.30 | 2013.07.01-2017.09.30 | 2012.03.01-2012.06.28 | 2017.01.01-2017.07.01 |
-|       TimeFitness        |         5         |         5       |         5       |         5       |         5       |
-|    TrafficNode.shape     |   (446976, 820)   |  (446976, 585)  |       (446976, 532)        |(34272, 207)|(52128, 325)|
-|    StationInfo.shape     |     [820, 5]      |       [585, 5]       |       [532, 5]       |[207,5]|[325,5]|
-|    TrafficGrid.shape     | (446976, 20, 20)  |       (446976, 20, 20)       |       (446976, 20, 20)       |[0]|[0]|
-|    GridLatLng.shape      |      [21, 2]      |       [21, 2]       |       [21, 2]       |[0]|[0]|
-|       Size            |[66.0M](./Public_Datasets/Bike/5_minutes/Bike_NYC.zip)              |[30.2M](./Public_Datasets/Bike/5_minutes/Bike_Chicago.zip)      |[31.0M](./Public_Datasets/Bike/5_minutes/Bike_DC.zip)|[11.8M](./Public_Datasets/Speed/5_minutes/METR_LA.zip)|[27.9M](./Public_Datasets/Speed/5_minutes/PEMS_BAY.zip)|
+|   **5-minutes**   |                   **New York City**                    |                        **Chicago**                         |                        **DC**                         |
+| :---------------: | :----------------------------------------------------: | :--------------------------------------------------------: | :---------------------------------------------------: |
+|     TimeRange     |                 2013.07.01-2017.09.30                  |                   2013.07.01-2017.09.30                    |                 2013.07.01-2017.09.30                 |
+|    TimeFitness    |                           5                            |                             5                              |                           5                           |
+| TrafficNode.shape |                     (446976, 820)                      |                       (446976, 585)                        |                     (446976, 532)                     |
+| StationInfo.shape |                        [820, 5]                        |                          [585, 5]                          |                       [532, 5]                        |
+| TrafficGrid.shape |                    (446976, 20, 20)                    |                      (446976, 20, 20)                      |                   (446976, 20, 20)                    |
+| GridLatLng.shape  |                        [21, 2]                         |                          [21, 2]                           |                        [21, 2]                        |
+|       Size        | [66.0M](./Public_Datasets/Bike/5_minutes/Bike_NYC.zip) | [30.2M](./Public_Datasets/Bike/5_minutes/Bike_Chicago.zip) | [31.0M](./Public_Datasets/Bike/5_minutes/Bike_DC.zip) |
 
 |        **60-minutes**        | **New York City** |   **Chicago**   |     **DC**      |
 | :----------------------: | :---------------: | :-------------: | :-------------: |
