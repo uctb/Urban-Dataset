@@ -102,6 +102,22 @@ Following lists the detail of the datasets:
 | GridLatLng.shape  |                          [0]                           |                           [0]                           |
 |       Size        | [11.8M](./Public_Datasets/Speed/5_minutes/METR_LA.zip) | [27.9M](./Public_Datasets/Speed/5_minutes/PEMS_BAY.zip) |
 
+## Pedestrian datasets
+
+The pedestrian datasets are collected from [open data website of Melbourne](https://data.melbourne.vic.gov.au/Transport/Pedestrian-Counting-System-Monthly-counts-per-hour/b2ak-trbp/data).The datasets' timespan is over 10 years and the datasets are still being updated at a fixed frequency.The total records of the datasets is about 4 million piece of data about pedestrian statistics with around 80 sensors at different locations.There is also accessible information about sensors in this website. In the dataset of sensor information, we obtain the name, the sensor's ID, the sensor's status(whether it is active or not), the latitude and longtitude of each sensor.
+
+<div class = "center" >
+
+|   **Pedestrain**   |                      **Melbourne**|
+| :---------------: | :----------------------------------------------------: |
+|     TimeRange     |                 2009.05.01-2022.03.31                  |
+|    TimeFitness    |                           60|
+| TrafficNode.shape |                      (112507, 70)                      |
+| StationInfo.shape |                        [70,5]                         |
+| TrafficGrid.shape |                          [0]                           |
+| GridLatLng.shape  |                          [0]                           |
+|       Size        | [60.0M](./Public_Datasets/Pedestrian/Pedestrian_Melbourne.pkl) |
+</div>
 ## How to get the datasets at other granularities?
 
 We could merge the fine-grained data to obtain the datasets at other granularities (e.g., by summing the 12 flows from the 5-minutes datasets to obtain 60-minutes datasets). UCTB provides the API to merge data. You could specify MergeIndex and MergeWay in the `NodeTrafficLoader` and `GridTrafficLoader`. Here is an example:
@@ -116,4 +132,3 @@ print(data_loader.dataset.node_traffic.shape) # with shape (446976, 820)
 data_loader = NodeTrafficLoader(dataset="Bike", city="NYC", MergeIndex=12, MergeWay="sum")
 print(data_loader.dataset.node_traffic.shape) # with shape (37248, 820)
 ```
-
