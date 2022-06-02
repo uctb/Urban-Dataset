@@ -118,6 +118,7 @@ The pedestrian datasets are collected from [open data website of Melbourne](http
 | GridLatLng.shape  |                          [0]                           |
 |       Size        | [60.0M](./Public_Datasets/Pedestrian/Pedestrian_Melbourne.pkl) |
 </div>
+
 ## How to get the datasets at other granularities?
 
 We could merge the fine-grained data to obtain the datasets at other granularities (e.g., by summing the 12 flows from the 5-minutes datasets to obtain 60-minutes datasets). UCTB provides the API to merge data. You could specify MergeIndex and MergeWay in the `NodeTrafficLoader` and `GridTrafficLoader`. Here is an example:
@@ -126,6 +127,7 @@ We could merge the fine-grained data to obtain the datasets at other granulariti
 from UCTB.dataset import NodeTrafficLoader
 
 # loading 5-minutes datasets
+
 data_loader = NodeTrafficLoader(dataset="Bike", city="NYC") 
 print(data_loader.dataset.node_traffic.shape) # with shape (446976, 820)
 
