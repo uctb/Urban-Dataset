@@ -46,7 +46,7 @@ data_loader = NodeTrafficLoader(dataset="Bike", city="NYC")
 
 ## Bike datasets
 
-The bikesharing datasets are collected from U.S. open data portals including New York City (NYC, https://www.citibikenyc.com/system-data), Chicago (CHI, https://www.divvybikes.com/system-data), and DC (https://www.capitalbikeshare.com/system-data). The dataset time span for all three cities is more than four years. The total number of historical flow records is around 49 million, 13 million, and 14 million in NYC, Chicago, and DC, respectively, and each record contains the start station, start time, stop station, stop time, etc. We count the number of bikesharing demands in each station at the next moment.
+The bikesharing datasets are collected from U.S. open data portals including New York City (NYC, https://www.citibikenyc.com/system-data), Chicago (CHI, https://www.divvybikes.com/system-data), and DC (https://www.capitalbikeshare.com/system-data). The dataset time span for all three cities is more than four years. The total number of historical flow records is around 49 million, 13 million, and 14 million in NYC, Chicago, and DC, respectively, and each record contains the start station, start time, stop station, stop time, etc. 
 
 Following shows the map-visualization of bike stations in NYC, Chicago and DC.
 
@@ -80,7 +80,7 @@ Following lists the detail of the datasets:
 
 ##  Speed datasets
 
-The two traffic speed datasets are widely used in STTP research: METR-LA and PEMS-BAY from Los Angeles (LA) County and Bay Area, respectively. In METR-LA, 207 sensors record highway vehicles’ speeds for four months; In PEMS-BAY, there are 325 sensors for six months. Each sensor can be seen as a station, and we predict the traffic speed of each sensor at the next time slot.
+The two traffic speed datasets are widely used in STTP research: METR-LA and PEMS-BAY from Los Angeles (LA) County and Bay Area, respectively. In METR-LA, 207 sensors record highway vehicles’ speeds for four months; In PEMS-BAY, there are 325 sensors for six months. Each sensor can be seen as a station.
 
 Following shows the map-visualization of METR-LA and PEMS-BAY.
 
@@ -106,7 +106,7 @@ The pedestrian datasets are collected from [open data website of Melbourne](http
 
 Following shows the map-visualization of Pedestrian datasets in Melbourne.
 
-<img src="https://github.com/uctb/Urban-Dataset/tree/main/images/Pedestrain Melbourne.png" style="zoom: 33%; height: 800px; width: 800px;"/>
+<img src="https://github.com/uctb/Urban-Dataset/blob/main/images/Pedestrain_Melbourne.png" style="zoom: 33%; height: 800px; width: 800px;"/>
 
 
 |   **60-minutes**   | **Pedestrain Melbourne** |
