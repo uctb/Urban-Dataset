@@ -54,9 +54,7 @@ Following shows the map-visualization of bike stations in NYC, Chicago and DC.
 
 
 
-**5-minutes granularity data catalog**: https://github.com/uctb/Urban-Dataset/tree/main/Public_Datasets/Bike/5_minutes
-
-**60-minutes granularity data catalog**: https://github.com/uctb/Urban-Dataset/tree/main/Public_Datasets/Bike/60_minutes
+**Data catalog**: https://github.com/uctb/Urban-Dataset/tree/main/Public_Datasets/Bike/
 
 Following lists the detail of the datasets:
 
@@ -84,11 +82,11 @@ Following lists the detail of the datasets:
 
 The two traffic speed datasets are widely used in STTP research: METR-LA and PEMS-BAY from Los Angeles (LA) County and Bay Area, respectively. In METR-LA, 207 sensors record highway vehicles’ speeds for four months; In PEMS-BAY, there are 325 sensors for six months. Each sensor can be seen as a station, and we predict the traffic speed of each sensor at the next time slot.
 
-Following shows the map-visualization of grid-based ride-sharing stations in METR-LA and PEMS-BAY.
+Following shows the map-visualization of METR-LA and PEMS-BAY.
 
 <img src="https://uctb.github.io/UCTB/sphinx/md_file/src/image/METR_LA.png" style="zoom: 33%; height: 800px; width: 800px;" /> <img src="https://uctb.github.io/UCTB/sphinx/md_file/src/image/PEMS_BAY.png" style="zoom: 33%; height: 800px; width: 800px;"/> 
 
-**5-minutes granularity data catalog**: https://github.com/uctb/Urban-Dataset/tree/main/Public_Datasets/Speed/5_minutes
+**Data catalog**: https://github.com/uctb/Urban-Dataset/tree/main/Public_Datasets/Speed/
 
 Following lists the detail of the datasets:
 
@@ -104,11 +102,14 @@ Following lists the detail of the datasets:
 
 ## Pedestrian datasets
 
-The pedestrian datasets are collected from [open data website of Melbourne](https://data.melbourne.vic.gov.au/Transport/Pedestrian-Counting-System-Monthly-counts-per-hour/b2ak-trbp/data).The datasets' timespan is over 10 years and the datasets are still being updated at a fixed frequency.The total records of the datasets is about 4 million piece of data about pedestrian statistics with around 80 sensors at different locations.There is also accessible information about sensors in this website. In the dataset of sensor information, we obtain the name, the sensor's ID, the sensor's status(whether it is active or not), the latitude and longtitude of each sensor.
+The pedestrian datasets are collected from [open data website of Melbourne](https://data.melbourne.vic.gov.au/Transport/Pedestrian-Counting-System-Monthly-counts-per-hour/b2ak-trbp/data).The datasets' timespan is over 10 years and the datasets are still being updated at a fixed frequency (i.e., 60 minutes).The total records of the datasets is about 4 million piece of data about pedestrian statistics with around 80 sensors at different locations.There is also accessible information about sensors in this website. In the dataset of sensor information, we obtain the name, the sensor's ID, the sensor's status(whether it is active or not), the latitude and longtitude of each sensor.
 
-<div class = "center" >
+Following shows the map-visualization of Pedestrian datasets in Melbourne.
 
-|   **Pedestrain**   |                      **Melbourne**|
+<img src="https://github.com/uctb/Urban-Dataset/tree/main/images/Pedestrain Melbourne.png" style="zoom: 33%; height: 800px; width: 800px;"/>
+
+
+|   **60-minutes**   | **Pedestrain Melbourne** |
 | :---------------: | :----------------------------------------------------: |
 |     TimeRange     |                 2009.05.01-2022.03.31                  |
 |    TimeFitness    |                           60|
@@ -116,8 +117,9 @@ The pedestrian datasets are collected from [open data website of Melbourne](http
 | StationInfo.shape |                        [70,5]                         |
 | TrafficGrid.shape |                          [0]                           |
 | GridLatLng.shape  |                          [0]                           |
-|       Size        | [60.0M](./Public_Datasets/Pedestrian/Pedestrian_Melbourne.pkl) |
-</div>
+|       Size        | [60.0M](./Public_Datasets/Pedestrian/60_minutes/Pedestrian_Melbourne.pkl) |
+
+**Data catalog**: https://github.com/uctb/Urban-Dataset/tree/main/Public_Datasets/Pedestrian
 
 ## How to get the datasets at other granularities?
 
