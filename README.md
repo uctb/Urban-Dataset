@@ -117,7 +117,7 @@ Following shows the map-visualization of Pedestrian datasets in Melbourne.
 | StationInfo.shape |                        [70,5]                         |
 | TrafficGrid.shape |                          [0]                           |
 | GridLatLng.shape  |                          [0]                           |
-|       Size        | [60.0M](./Public_Datasets/Pedestrian/60_minutes/Pedestrian_Melbourne.pkl) |
+|       Size        | [60.0M](https://github.com/uctb/Urban-Dataset/blob/main/Public_Datasets/Pedestrian/60_minutes/Pedestrian_Melbourne.pkl.zip) |
 
 **Data catalog**: https://github.com/uctb/Urban-Dataset/tree/main/Public_Datasets/Pedestrian
 
