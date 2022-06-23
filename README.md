@@ -43,6 +43,7 @@ data_loader = GridTrafficLoader(dataset="Bike", city="NYC")
 from UCTB.dataset import NodeTrafficLoader
 data_loader = NodeTrafficLoader(dataset="Bike", city="NYC")
 ```
+For more detailed instructions of data loader, you can look into this [jupyter notebook](Tutorial/tutorial.ipynb)
 
 ## Bike datasets
 
