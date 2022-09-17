@@ -97,7 +97,7 @@ Following lists the detail of the datasets:
 |    TimeFitness    |                           5                            |                            5                            |
 | TrafficNode.shape |                      (34272, 207)                      |                      (52128, 325)                       |
 | StationInfo.shape |                        [207,5]                         |                         [325,5]                         |
-| TrafficGrid.shape |                          [0]                           |                           [0]                           |
+| TrafficGrid.shape |                          (0)                           |                           (0)                           |
 | GridLatLng.shape  |                          [0]                           |                           [0]                           |
 |       Size        | [11.8M](./Public_Datasets/Speed/5_minutes/METR_LA.zip) | [27.9M](./Public_Datasets/Speed/5_minutes/PEMS_BAY.zip) |
 
@@ -107,7 +107,7 @@ The pedestrian datasets are collected from [open data website of Melbourne](http
 
 Following shows the map-visualization of Pedestrian datasets in Melbourne.
 
-<img src="https://github.com/uctb/Urban-Dataset/blob/main/images/Pedestrain_Melbourne.png" style="zoom: 33%; height: 800px; width: 800px;"/>
+<img src="images/Pedestrain_Melbourne.png" style="zoom: 33%; height: 800px; width: 800px;"/>
 
 
 |   **60-minutes**   | **Pedestrain Melbourne** |
@@ -116,15 +116,36 @@ Following shows the map-visualization of Pedestrian datasets in Melbourne.
 |    TimeFitness    |                           60|
 | TrafficNode.shape |                      (112507, 70)                      |
 | StationInfo.shape |                        [70,5]                         |
-| TrafficGrid.shape |                          [0]                           |
+| TrafficGrid.shape |                          (0)                           |
 | GridLatLng.shape  |                          [0]                           |
-|       Size        | [60.0M](https://github.com/uctb/Urban-Dataset/blob/main/Public_Datasets/Pedestrian/60_minutes/Pedestrian_Melbourne.pkl.zip) |
+|       Size        | [9.44M](https://github.com/uctb/Urban-Dataset/blob/main/Public_Datasets/Pedestrian/60_minutes/Pedestrian_Melbourne.pkl.zip) |
 
 **Data catalog**: https://github.com/uctb/Urban-Dataset/tree/main/Public_Datasets/Pedestrian
+
+## Taxi datasets
+
+The Taxi datasets are collected from the [city of Chicago's open data portal](https://data.cityofchicago.org/Transportation/Taxi-Trips/wrvz-psew), a place where you are able to freely download Chicago city's datasets for your own analysis. The datasets record taxi trips from these dimensions listed below: pickup and dropoff time, pickup and dropoff location, fee etc.In our dataset, we only consider the pickup info of each record. You can conduct more comprehensive analysis with the help of our datasets and the website.
+
+Following shows the map-visualization of Taxi trips datasets.
+
+<img src="images/Chicago_Taxi.png" style="zoom: 33%; height: 800px; width: 800px;"/>
+
+|   **60-minutes**   | **Pedestrain Melbourne** |
+| :---------------: | :----------------------------------------------------: |
+|     TimeRange     |                 '2013-01-01', '2022-04-01'|
+|    TimeFitness    |                           60|
+| TrafficNode.shape |                      (81049, 2400)                      |
+| StationInfo.shape |                        [2400,5]                         |
+| TrafficGrid.shape |                          (81049, 30, 30)                          |
+| GridLatLng.shape  |                          [2,31]                           |
+|       Size        | [24.3M](https://github.com/uctb/Urban-Dataset/blob/main/Public_Datasets/Taxi/60_minutes/Taxi_Chicago.zip) |
+
+**Data catalog**: https://github.com/uctb/Urban-Dataset/tree/main/Public_Datasets/Taxi
 
 ## How to get the datasets at other granularities?
 
 We could merge the fine-grained data to obtain the datasets at other granularities (e.g., by summing the 12 flows from the 5-minutes datasets to obtain 60-minutes datasets). UCTB provides the API to merge data. You could specify MergeIndex and MergeWay in the `NodeTrafficLoader` and `GridTrafficLoader`. Here is an example:
+
 
 ```python
 from UCTB.dataset import NodeTrafficLoader
