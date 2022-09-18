@@ -132,7 +132,7 @@ Following shows the map-visualization of Taxi trips datasets.
 
 <img src="images/Chicago_Taxi.png" style="zoom: 33%; height: 800px; width: 800px;"/>
 
-|  **60-minutes**   |                                         **Pedestrain Melbourne**                                          |
+|  **60-minutes**   |                                         **Taxi Chicago**                                          |
 | :---------------: | :-------------------------------------------------------------------------------------------------------: |
 |     TimeRange     |                                        '2013-01-01', '2022-04-01'                                         |
 |    TimeFitness    |                                                    60                                                     |
