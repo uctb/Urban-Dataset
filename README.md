@@ -53,7 +53,7 @@ The bikesharing datasets are collected from U.S. open data portals including New
 
 Following shows the map-visualization of bike stations in NYC, Chicago and DC.
 
-<img src="https://uctb.github.io/UCTB/sphinx/md_file/src/image/Bike_NYC.jpg" style="zoom: 30%; height: 300px; width: 300px;" /> <img src="https://uctb.github.io/UCTB/sphinx/md_file/src/image/Bike_Chicago.jpg" style="zoom: 30%; height: 300px; width: 300px;"/> <img src="https://uctb.github.io/UCTB/sphinx/md_file/src/image/Bike_DC.jpg" style="zoom: 30%; height: 300px; width: 300px;" />
+<img src="https://uctb.github.io/UCTB/sphinx/md_file/src/image/Bike_NYC.jpg" style="zoom: 30%; height: 250px; width: 250px;" /> <img src="https://uctb.github.io/UCTB/sphinx/md_file/src/image/Bike_Chicago.jpg" style="zoom: 30%; height: 250px; width: 250px;"/> <img src="https://uctb.github.io/UCTB/sphinx/md_file/src/image/Bike_DC.jpg" style="zoom: 30%; height: 250px; width: 250px;" />
 
 
 
