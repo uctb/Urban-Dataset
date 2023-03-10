@@ -53,7 +53,7 @@ The bikesharing datasets are collected from U.S. open data portals including New
 
 Following shows the map-visualization of bike stations in NYC, Chicago and DC.
 
-<img src="https://uctb.github.io/UCTB/sphinx/md_file/src/image/Bike_NYC.jpg" style="zoom: 30%; height: 800px; width: 800px;" /> <img src="https://uctb.github.io/UCTB/sphinx/md_file/src/image/Bike_Chicago.jpg" style="zoom: 30%; height: 800px; width: 800px;"/> <img src="https://uctb.github.io/UCTB/sphinx/md_file/src/image/Bike_DC.jpg" style="zoom: 30%; height: 800px; width: 800px;" />
+<img src="https://uctb.github.io/UCTB/sphinx/md_file/src/image/Bike_NYC.jpg" style="zoom: 30%; height: 300px; width: 300px;" /> <img src="https://uctb.github.io/UCTB/sphinx/md_file/src/image/Bike_Chicago.jpg" style="zoom: 30%; height: 300px; width: 300px;"/> <img src="https://uctb.github.io/UCTB/sphinx/md_file/src/image/Bike_DC.jpg" style="zoom: 30%; height: 300px; width: 300px;" />
 
 
 
@@ -87,7 +87,7 @@ The two traffic speed datasets are widely used in STTP research: METR-LA and PEM
 
 Following shows the map-visualization of METR-LA and PEMS-BAY.
 
-<img src="https://uctb.github.io/UCTB/sphinx/md_file/src/image/METR_LA.png" style="zoom: 33%; height: 800px; width: 800px;" /> <img src="https://uctb.github.io/UCTB/sphinx/md_file/src/image/PEMS_BAY.png" style="zoom: 33%; height: 800px; width: 800px;"/> 
+<img src="https://uctb.github.io/UCTB/sphinx/md_file/src/image/METR_LA.png" style="zoom: 33%; height: 400px; width: 400px;" /> <img src="https://uctb.github.io/UCTB/sphinx/md_file/src/image/PEMS_BAY.png" style="zoom: 33%; height: 400px; width: 400px;"/> 
 
 **Data catalog**: https://github.com/uctb/Urban-Dataset/tree/main/Public_Datasets/Speed/
 
@@ -109,7 +109,7 @@ The pedestrian datasets are collected from [open data website of Melbourne](http
 
 Following shows the map-visualization of Pedestrian datasets in Melbourne.
 
-<img src="images/Pedestrain_Melbourne.png" style="zoom: 33%; height: 800px; width: 800px;"/>
+<img src="images/Pedestrain_Melbourne.png" style="zoom: 33%; height: 400px; width: 400px;"/>
 
 
 |  **60-minutes**   |                                                  **Pedestrain Melbourne**                                                   |
@@ -130,7 +130,7 @@ The Taxi datasets are collected from the [city of Chicago's open data portal](ht
 
 Following shows the map-visualization of Taxi trips datasets.
 
-<img src="images/Chicago_Taxi.png" style="zoom: 33%; height: 800px; width: 800px;"/>
+<img src="images/Chicago_Taxi.png" style="zoom: 33%"/>
 
 |  **60-minutes**   |                                         **Taxi Chicago**                                          |
 | :---------------: | :-------------------------------------------------------------------------------------------------------: |
