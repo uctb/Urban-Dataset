@@ -136,11 +136,11 @@ Following shows the map-visualization of Taxi trips datasets.
 | :---------------: | :-------------------------------------------------------------------------------------------------------: |
 |     TimeRange     |                                        '2013-01-01', '2022-04-01'                                         |
 |    TimeFitness    |                                                    60                                                     |
-| TrafficNode.shape |                                               (81049, 2400)                                               |
-| StationInfo.shape |                                                 [2400,5]                                                  |
+| TrafficNode.shape |                                               (81049, 900)                                               |
+| StationInfo.shape |                                                 [900,5]                                                  |
 | TrafficGrid.shape |                                              (81049, 30, 30)                                              |
 | GridLatLng.shape  |                                                  [2,31]                                                   |
-|       Size        | [24.3M](https://github.com/uctb/Urban-Dataset/blob/main/Public_Datasets/Taxi/60_minutes/Taxi_Chicago.zip) |
+|       Size        | [17.5M](https://github.com/uctb/Urban-Dataset/blob/main/Public_Datasets/Taxi/60_minutes/Taxi_Chicago.zip) |
 
 **Data catalog**: https://github.com/uctb/Urban-Dataset/tree/main/Public_Datasets/Taxi
 
