@@ -114,13 +114,13 @@ Following shows the map-visualization of Pedestrian datasets in Melbourne.
 
 |  **60-minutes**   |                                                  **Pedestrain Melbourne**                                                   |
 | :---------------: | :-------------------------------------------------------------------------------------------------------------------------: |
-|     TimeRange     |                                                    2009.05.01-2022.03.31                                                    |
+|     TimeRange     |                                                    2021.01.01-2022.11.01                                                    |
 |    TimeFitness    |                                                             60                                                              |
-| TrafficNode.shape |                                                        (112507, 70)                                                         |
-| StationInfo.shape |                                                           [70,5]                                                            |
+| TrafficNode.shape |                                                        (16056, 55)                                                         |
+| StationInfo.shape |                                                           [55,5]                                                            |
 | TrafficGrid.shape |                                                             (0)                                                             |
 | GridLatLng.shape  |                                                             [0]                                                             |
-|       Size        | [9.44M](https://github.com/uctb/Urban-Dataset/blob/main/Public_Datasets/Pedestrian/60_minutes/Pedestrian_Melbourne.pkl.zip) |
+|       Size        | [1.18M](https://github.com/uctb/Urban-Dataset/blob/main/Public_Datasets/Pedestrian/60_minutes/Pedestrian_Melbourne.pkl.zip) |
 
 **Data catalog**: https://github.com/uctb/Urban-Dataset/tree/main/Public_Datasets/Pedestrian
 
