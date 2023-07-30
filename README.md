@@ -164,7 +164,7 @@ Following shows the map-visualization of `Taxi_fine_grained_Chicago` datasets.
 | StationInfo.shape |                                                 [77,5]                                                  |[121,5]|
 | TrafficGrid.shape |                                              (0)                                              |(0)|
 | GridLatLng.shape  |                                                  [0]                                                   |[0]|
-|       Size        | [6.1M](https://github.com/uctb/Urban-Dataset/blob/main/Public_Datasets/Taxi/60_minutes/Taxi_Chicago.zip) |[9.2M]((https://github.com/uctb/Urban-Dataset/blob/main/Public_Datasets/Taxi/60_minutes/Taxi_fine_grained_Chicago.zip))|
+|       Size        | [6.1M](https://github.com/uctb/Urban-Dataset/blob/main/Public_Datasets/Taxi/60_minutes/Taxi_Chicago.zip) |[9.2M](https://github.com/uctb/Urban-Dataset/blob/main/Public_Datasets/Taxi/60_minutes/Taxi_fine_grained_Chicago.zip)|
 
 **Data catalog**: https://github.com/uctb/Urban-Dataset/tree/main/Public_Datasets/Taxi
 
