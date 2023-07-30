@@ -105,11 +105,11 @@ Following lists the detail of the datasets:
 
 ## Pedestrian datasets
 
-The pedestrian datasets are collected from [open data website of Melbourne](https://data.melbourne.vic.gov.au/Transport/Pedestrian-Counting-System-Monthly-counts-per-hour/b2ak-trbp/data).The datasets' timespan is over 10 years and the datasets are still being updated at a fixed frequency (i.e., 60 minutes).The total records of the datasets is about 4 million piece of data about pedestrian statistics with around 80 sensors at different locations.There is also accessible information about sensors in this website. In the dataset of sensor information, we obtain the name, the sensor's ID, the sensor's status(whether it is active or not), the latitude and longtitude of each sensor.
+The pedestrian datasets are collected from [open data website of Melbourne](https://data.melbourne.vic.gov.au/Transport/Pedestrian-Counting-System-Monthly-counts-per-hour/b2ak-trbp/data). The full datasets' timespan is over 10 years and the datasets are still being updated at a fixed frequency (i.e., 60 minutes). Due to the fact that some sites were not set up in the early days and some sites lacked data, we only choose about a year in temporal dimension and 55 stations in spatial dimension. There is also accessible information about sensors on the same website. In the dataset of sensor information, we obtain the name, the sensor's ID, the sensor's status(whether it is active or not), the latitude and longtitude of each sensor.
 
 Following shows the map-visualization of Pedestrian datasets in Melbourne.
 
-<img src="images/Pedestrain_Melbourne.png" style="zoom: 33%; height: 400px; width: 400px;"/>
+<img src="images/Pedestrain_Melbourne.png" style="align:center"/>
 
 
 |  **60-minutes**   |                                                  **Pedestrain Melbourne**                                                   |
@@ -126,21 +126,45 @@ Following shows the map-visualization of Pedestrian datasets in Melbourne.
 
 ## Taxi datasets
 
-The Taxi datasets are collected from the [city of Chicago's open data portal](https://data.cityofchicago.org/Transportation/Taxi-Trips/wrvz-psew), a place where you are able to freely download Chicago city's datasets for your own analysis. The datasets record taxi trips from these dimensions listed below: pickup and dropoff time, pickup and dropoff location, fee etc.In our dataset, we only consider the pickup info of each record. You can conduct more comprehensive analysis with the help of our datasets and the website.
+The Taxi datasets are collected from the [city of Chicago's open data portal](https://data.cityofchicago.org/Transportation/Taxi-Trips/wrvz-psew), a place where you are able to freely download Chicago city's datasets for your own analysis. The datasets record taxi trips from these dimensions listed below: pickup and dropoff time, pickup and dropoff location, fee etc. In our dataset, we only consider the pickup info of each record. You can conduct more comprehensive analysis with the help of our datasets and the website.
 
-Following shows the map-visualization of Taxi trips datasets.
+**Facts in dataset description**
 
-<img src="images/Chicago_Taxi.png" style="zoom: 33%"/>
+1. There are two candidate spatial discretization information: **[census tract](https://data.cityofchicago.org/Facilities-Geographic-Boundaries/Boundaries-Census-Tracts-2010/5jrd-6zik)** and **[community area](https://data.cityofchicago.org/Facilities-Geographic-Boundaries/Boundaries-Community-Areas-current-/cauq-8yn6)**.
+2. For each record, it will aggregate census tract granularity into community area due to [privacy preserve](http://dev.cityofchicago.org/open%20data/data%20portal/2019/04/12/tnp-taxi-privacy.html).
 
-|  **60-minutes**   |                                         **Taxi Chicago**                                          |
-| :---------------: | :-------------------------------------------------------------------------------------------------------: |
-|     TimeRange     |                                       2013.01.01-2018.01.01                                      |
-|    TimeFitness    |                                                    15                                                     |
-| TrafficNode.shape |                                               (175296, 77)                                               |
-| StationInfo.shape |                                                 [77,5]                                                  |
-| TrafficGrid.shape |                                              (0)                                              |
-| GridLatLng.shape  |                                                  [0]                                                   |
-|       Size        | [6.1M](https://github.com/uctb/Urban-Dataset/blob/main/Public_Datasets/Taxi/60_minutes/Taxi_Chicago.zip) |
+**Which granularity to choose**
+
+Thus, we need to choose a proper granularity. According to the needs of downstream tasks(Spatio-temporal traffic prediction), we summarize two principles of spatial granularity selection:
+
+1. Spatial granularity as small as possible(especially in high-demand area).
+2. Demamd aggregated due to privacy as few as possible.
+
+On one hand, time distribution of taxi demand in downtown is dense, and the probability of being aggregated is small. on the other hand, the time distribution of taxi demand in the suburbs is sparse, and the probability of being aggregated is high.
+
+**Final datasets we open**
+
+We finally choose to process two datasets: one is `Taxi_Chicago`, where only spatial granularity **community area** is used; another is `Taxi_fine_grained_Chicago`, where **community area** is used in suburbs while **census tract** is used in downtown.
+
+>We highly recommend that you conduct more analysis on **Taxi_fine_grained_Chicago**. By the way, we have adopted a special operation that taxi demand of specific census tract in 15-minute time window equal or less than 2 will be set 2. This operation won't affect much because all of aggregation situation is ultimately caused by insufficient demand.
+
+Following shows the map-visualization of `Taxi_Chicago` datasets.
+
+<img src="images/Chicago_Taxi.png" style="align:center"/>
+
+Following shows the map-visualization of `Taxi_fine_grained_Chicago` datasets.
+
+<img src="images/Chicago_fine_grained_Taxi.png" style="align:center"/>
+
+|  **15-minutes**   |**Taxi_Chicago**|**Taxi_fine_grained_Chicago**|
+| :---------------: | :-------------------------------------------------------------------------------------------------------: |:---------------:|
+|     TimeRange     |                                       2013.01.01-2018.01.01                                      |2013.01.01-2018.01.01|
+|    TimeFitness    |                                                    15                                                     |15|
+| TrafficNode.shape |                                               (175296, 77)                                               |(175296, 121)|
+| StationInfo.shape |                                                 [77,5]                                                  |[121,5]|
+| TrafficGrid.shape |                                              (0)                                              |(0)|
+| GridLatLng.shape  |                                                  [0]                                                   |[0]|
+|       Size        | [6.1M](https://github.com/uctb/Urban-Dataset/blob/main/Public_Datasets/Taxi/60_minutes/Taxi_Chicago.zip) |[9.2M]((https://github.com/uctb/Urban-Dataset/blob/main/Public_Datasets/Taxi/60_minutes/Taxi_fine_grained_Chicago.zip))|
 
 **Data catalog**: https://github.com/uctb/Urban-Dataset/tree/main/Public_Datasets/Taxi
 
