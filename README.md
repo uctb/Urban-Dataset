@@ -126,7 +126,9 @@ Following shows the map-visualization of Pedestrian datasets in Melbourne.
 
 ## Taxi datasets
 
-The Taxi datasets are collected from the [city of Chicago's open data portal](https://data.cityofchicago.org/Transportation/Taxi-Trips/wrvz-psew), a place where you are able to freely download Chicago city's datasets for your own analysis. The datasets record taxi trips from these dimensions listed below: pickup and dropoff time, pickup and dropoff location, fee etc. In our dataset, we only consider the pickup info of each record. You can conduct more comprehensive analysis with the help of our datasets and the website.
+The Taxi datasets are collected from the [city of Chicago's open data portal](https://data.cityofchicago.org/Transportation/Taxi-Trips/wrvz-psew) and the [city of New York's open data portal](https://opendata.cityofnewyork.us/), where you are able to freely download Chicago city's and NYC's  datasets for your own analysis. The datasets record taxi trips from these dimensions listed below: pickup and dropoff time, pickup and dropoff location, fee etc. In our dataset, we only consider the pickup info of each record. You can conduct more comprehensive analysis with the help of our datasets and the website.
+
+### Taxi chicago dataset
 
 **Facts in dataset description**
 
@@ -156,15 +158,23 @@ Following shows the map-visualization of `Taxi_fine_grained_Chicago` datasets.
 
 <img src="images/Chicago_fine_grained_Taxi.png" style="align:center"/>
 
-|  **15-minutes**   |**Taxi_Chicago**|**Taxi_fine_grained_Chicago**|
-| :---------------: | :-------------------------------------------------------------------------------------------------------: |:---------------:|
-|     TimeRange     |                                       2013.01.01-2018.01.01                                      |2013.01.01-2018.01.01|
-|    TimeFitness    |                                                    15                                                     |15|
-| TrafficNode.shape |                                               (175296, 77)                                               |(175296, 121)|
-| StationInfo.shape |                                                 [77,5]                                                  |[121,5]|
-| TrafficGrid.shape |                                              (0)                                              |(0)|
-| GridLatLng.shape  |                                                  [0]                                                   |[0]|
-|       Size        | [6.1M](https://github.com/uctb/Urban-Dataset/blob/main/Public_Datasets/Taxi/60_minutes/Taxi_Chicago.zip) |[10.0M](https://github.com/uctb/Urban-Dataset/blob/main/Public_Datasets/Taxi/60_minutes/Taxi_fine_grained_Chicago.zip)|
+### Taxi NYC dataset
+
+We collect Taxi NYC dataset from these two websites: https://opendata.cityofnewyork.us/ and https://www.nyc.gov/site/tlc/about/tlc-trip-record-data.page. We also obtain information of taxi zones in New York from this [website](https://opendata.cityofnewyork.us/). It's worth noting that within the time range [2009,2015] the website release actual longitude and latitude for each trip while in the past 7 years([2016,2023]) we can only obtain the taxi zone ID for each trip.
+
+Following shows the map-visualization of `Taxi_NYC` datasets.
+
+<img src="images/NYC_Taxi.png" style="align:center"/>
+
+|  **Taxi-Demand**   |**Taxi_Chicago**|**Taxi_fine_grained_Chicago**|**Taxi_NYC**|
+| :---------------: | :-------------------------------------------------------------------------------------------------------: |:---------------:|:---------------:|
+|     TimeRange     |2013.01.01-2018.01.01|2013.01.01-2018.01.01|2016.01.01-2023.06.01|
+|    TimeFitness    |15min|15min|5min|
+| TrafficNode.shape |                                               (175296, 77)                                               |(175296, 121)|(779904, 263)|
+| StationInfo.shape |                                                 [77,5]                                                  |[121,5]|[263,5]|
+| TrafficGrid.shape |                                              (0)                                              |(0)|(0)|
+| GridLatLng.shape  |                                                  [0]                                                   |[0]|[0]|
+|       Size        | [6.1M](https://github.com/uctb/Urban-Dataset/blob/main/Public_Datasets/Taxi/60_minutes/Taxi_Chicago.zip) |[10.0M](https://github.com/uctb/Urban-Dataset/blob/main/Public_Datasets/Taxi/60_minutes/Taxi_fine_grained_Chicago.zip)|[36.5M](Public_Datasets/Taxi/5_minutes/Taxi_NYC.zip)
 
 **Data catalog**: https://github.com/uctb/Urban-Dataset/tree/main/Public_Datasets/Taxi
 
