@@ -160,7 +160,7 @@ Following shows the map-visualization of `Taxi_fine_grained_Chicago` datasets.
 
 ### Taxi NYC dataset
 
-We collect Taxi NYC dataset from these two websites: https://opendata.cityofnewyork.us/ and https://www.nyc.gov/site/tlc/about/tlc-trip-record-data.page. We also obtain information of taxi zones in New York from this [website](https://opendata.cityofnewyork.us/). It's worth noting that within the time range [2009,2015] the website release actual longitude and latitude for each trip while in the past 7 years([2016,2023]) we can only obtain the taxi zone ID for each trip.
+We collect Taxi NYC dataset from these two websites: https://opendata.cityofnewyork.us/ and https://www.nyc.gov/site/tlc/about/tlc-trip-record-data.page. We also obtain information of taxi zones in New York from this [website](https://opendata.cityofnewyork.us/). As a result of size of dataset, we put it on the [link](https://pan.baidu.com/s/19iUVCTqgAvJJf0pgHVyZMQ?pwd=gw6p) with extraction code gw6p.
 
 Following shows the map-visualization of `Taxi_NYC` datasets.
 
@@ -168,7 +168,7 @@ Following shows the map-visualization of `Taxi_NYC` datasets.
 
 |  **Taxi-Demand**   |**Taxi_Chicago**|**Taxi_fine_grained_Chicago**|**Taxi_NYC**|
 | :---------------: | :-------------------------------------------------------------------------------------------------------: |:---------------:|:---------------:|
-|     TimeRange     |2013.01.01-2018.01.01|2013.01.01-2018.01.01|2016.01.01-2023.06.01|
+|     TimeRange     |2013.01.01-2018.01.01|2013.01.01-2018.01.01|2009.01.01-2023.06.01|
 |    TimeFitness    |15min|15min|5min|
 | TrafficNode.shape |                                               (175296, 77)                                               |(175296, 121)|(779904, 263)|
 | StationInfo.shape |                                                 [77,5]                                                  |[121,5]|[263,5]|
