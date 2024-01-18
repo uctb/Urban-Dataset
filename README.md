@@ -11,10 +11,10 @@ Currently, UCTB offers the following datasets in 4 scenarios, with detailed info
 |   Bike-sharing   |           DC           | 2013.07.01-2017.09.30 | 5 & 60 mins  | [5 mins](https://github.com/uctb/Urban-Dataset/blob/main/Public_Datasets/Bike/5_minutes/Bike_DC.zip) [60 mins](https://github.com/uctb/Urban-Dataset/blob/main/Public_Datasets/Bike/60_minutes/Bike_DC.zip) |
 |  Vehicle Speed   |           LA           | 2012.03.01-2012.06.28 |    5 mins    | [5 mins](https://github.com/uctb/Urban-Dataset/blob/main/Public_Datasets/Speed/5_minutes/METR_LA.zip) |
 |  Vehicle Speed   |          BAY           | 2017.01.01-2017.07.01 |    5 mins    | [5 mins](https://github.com/uctb/Urban-Dataset/blob/main/Public_Datasets/Speed/5_minutes/PEMS_BAY.zip) |
-| Pedestrian Count |       Melbourne        | 2021.01.01-2022.11.01 |   60 mins    | [60 mins](https://github.com/uctb/Urban-Dataset/blob/main/Public_Datasets/Pedestrian/60_minutes/Pedestrian_Melbourne.pkl.zip) |
+| Pedestrian Count |       Melbourne        | 2021.01.01-2022.11.01 |   60 mins    | [60 mins](https://github.com/uctb/Urban-Dataset/blob/main/Public_Datasets/Pedestrian/60_minutes/Pedestrian_Melbourne.zip) |
 |   Ride-sharing   |  Chicago (community)   | 2013.01.01-2018.01.01 |   15 mins    | [15 mins](https://github.com/uctb/Urban-Dataset/blob/main/Public_Datasets/Taxi/15_minutes/Taxi_Chicago.zip) |
-|   Ride-sharing   | Chicago (census tract) | 2013.01.01-2018.01.01 |   15 mins    | [15 mins](https://github.com/uctb/Urban-Dataset/blob/main/Public_Datasets/Taxi/60_minutes/Taxi_fine_grained_Chicago.zip) |
-|   Ride-sharing   |          NYC           | 2009.01.01-2023.06.01 |    5 mins    |    [5 mins](Public_Datasets/Taxi/5_minutes/Taxi_NYC.zip)     |
+|   Ride-sharing   | Chicago (census tract) | 2013.01.01-2018.01.01 |   15 mins    | [15 mins](https://github.com/uctb/Urban-Dataset/blob/main/Public_Datasets/Taxi/15_minutes/Taxi_fine_grained_Chicago.zip) |
+|   Ride-sharing   |          NYC           | 2009.01.01-2023.06.01 |    5 mins    | [5 mins](https://github.com/uctb/Urban-Dataset/blob/main/Public_Datasets/Taxi/5_minutes/Taxi_NYC.zip) |
 
 ## Bike Datasets
 
@@ -72,7 +72,7 @@ The pedestrian datasets are collected from [open data website of Melbourne](http
 
 Following shows the map-visualization of Pedestrian datasets in Melbourne.
 
-<img src="images/Pedestrain_Melbourne.png" style="zoom: 33%;"/>
+<img src="images/Pedestrain_Melbourne.png" style="zoom: 30%;"/>
 
 **Data catalog**: https://github.com/uctb/Urban-Dataset/tree/main/Public_Datasets/Pedestrian
 
@@ -85,7 +85,7 @@ Following shows the map-visualization of Pedestrian datasets in Melbourne.
 | StationInfo.shape |                            [55,5]                            |
 | TrafficGrid.shape |                             (0)                              |
 | GridLatLng.shape  |                             [0]                              |
-|       Size        | [1.18M](https://github.com/uctb/Urban-Dataset/blob/main/Public_Datasets/Pedestrian/60_minutes/Pedestrian_Melbourne.pkl.zip) |
+|       Size        | [1.18M](https://github.com/uctb/Urban-Dataset/blob/main/Public_Datasets/Pedestrian/60_minutes/Pedestrian_Melbourne.zip) |
 
 ## Taxi Datasets
 
@@ -115,11 +115,11 @@ We finally choose to process two datasets: one is `Taxi_Chicago`, where only spa
 
 Following shows the map-visualization of `Taxi_Chicago` datasets.
 
-<img src="images/Chicago_Taxi.png" style="zoom: 50%;"/>
+<img src="images/Chicago_Taxi.png" style="zoom: 33%;"/>
 
 Following shows the map-visualization of `Taxi_fine_grained_Chicago` datasets.
 
-<img src="images/Chicago_fine_grained_Taxi.png" style="zoom: 50%;"/>
+<img src="images/Chicago_fine_grained_Taxi.png" style="zoom: 30%;"/>
 
 ### Taxi NYC Dataset
 
@@ -127,7 +127,7 @@ We collect Taxi NYC dataset from these two websites: https://opendata.cityofnewy
 
 Following shows the map-visualization of `Taxi_NYC` datasets.
 
-<img src="images/NYC_Taxi.png" style="zoom: 33%;"/>
+<img src="images/NYC_Taxi.png" style="zoom: 30%;"/>
 
 **Data catalog**: https://github.com/uctb/Urban-Dataset/tree/main/Public_Datasets/Taxi
 
@@ -139,7 +139,7 @@ Following shows the map-visualization of `Taxi_NYC` datasets.
 | StationInfo.shape |                                                 [77,5]                                                  |[121,5]|[263,5]|
 | TrafficGrid.shape |                                              (0)                                              |(0)|(0)|
 | GridLatLng.shape  |                                                  [0]                                                   |[0]|[0]|
-|       Size        | [6.06M](https://github.com/uctb/Urban-Dataset/blob/main/Public_Datasets/Taxi/60_minutes/Taxi_Chicago.zip) |[10.0M](https://github.com/uctb/Urban-Dataset/blob/main/Public_Datasets/Taxi/60_minutes/Taxi_fine_grained_Chicago.zip)|[36.5M](Public_Datasets/Taxi/5_minutes/Taxi_NYC.zip)|
+|       Size        | [6.06M](https://github.com/uctb/Urban-Dataset/blob/main/Public_Datasets/Taxi/15_minutes/Taxi_Chicago.zip) |[10.0M](https://github.com/uctb/Urban-Dataset/blob/main/Public_Datasets/Taxi/15_minutes/Taxi_fine_grained_Chicago.zip)|[36.5M](https://github.com/uctb/Urban-Dataset/blob/main/Public_Datasets/Taxi/5_minutes/Taxi_NYC.zip)|
 
 ## How to load the data?
 
