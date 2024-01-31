@@ -2,7 +2,7 @@
 
 ## Datasets Overview
 
-Currently, UCTB offers the following datasets in 4 scenarios, with detailed information provided in the table below. We are constantly working to release more datasets in the future.
+Currently, UCTB offers the following datasets in 5 scenarios, with detailed information provided in the table below. We are constantly working to release more datasets in the future.
 
 | **Application**  |        **City**        |       Time Span       | **Interval** |                           **Link**                           |
 | :--------------: | :--------------------: | :-------------------: | :----------: | :----------------------------------------------------------: |
@@ -15,6 +15,7 @@ Currently, UCTB offers the following datasets in 4 scenarios, with detailed info
 |   Ride-sharing   |  Chicago (community)   | 2013.01.01-2018.01.01 |   15 mins    | [15 mins](https://github.com/uctb/Urban-Dataset/blob/main/Public_Datasets/Taxi/15_minutes/Taxi_Chicago.zip) |
 |   Ride-sharing   | Chicago (census tract) | 2013.01.01-2018.01.01 |   15 mins    | [15 mins](https://github.com/uctb/Urban-Dataset/blob/main/Public_Datasets/Taxi/15_minutes/Taxi_fine_grained_Chicago.zip) |
 |   Ride-sharing   |          NYC           | 2009.01.01-2023.06.01 |    5 mins    | [5 mins](https://github.com/uctb/Urban-Dataset/blob/main/Public_Datasets/Taxi/5_minutes/Taxi_NYC.zip) |
+|     Metro        |          NYC           | 2022.02.01-2023.12.21 |   60 mins    | [60 mins](https://github.com/uctb/Urban-Dataset/blob/main/Public_Datasets/Metro/60_minutes/Metro_NYC.zip) |
 
 ## Bike Datasets
 
@@ -140,6 +141,29 @@ Following shows the map-visualization of `Taxi_NYC` datasets.
 | TrafficGrid.shape |                                              (0)                                              |(0)|(0)|
 | GridLatLng.shape  |                                                  [0]                                                   |[0]|[0]|
 |       Size        | [6.06M](https://github.com/uctb/Urban-Dataset/blob/main/Public_Datasets/Taxi/15_minutes/Taxi_Chicago.zip) |[10.0M](https://github.com/uctb/Urban-Dataset/blob/main/Public_Datasets/Taxi/15_minutes/Taxi_fine_grained_Chicago.zip)|[36.5M](https://github.com/uctb/Urban-Dataset/blob/main/Public_Datasets/Taxi/5_minutes/Taxi_NYC.zip)|
+
+
+## Metro Datasets
+
+The metro datasets are collected from  [DATA.NY.GOV: MTA Subway Hourly Ridership](https://data.ny.gov/Transportation/MTA-Subway-Hourly-Ridership-Beginning-February-202/wujg-7c2s/about_data). The Metro_NYC dataset is provided by the Metropolitan Transportation Authority and is available for public download. It offers estimates of subway ridership on an hourly basis by subway station complex. Data collection started from February 2022 and has been regularly updated. The Metro_NYC dataset includes data up to December 21, 2023. The latest version can be accessed on the website mentioned above.
+
+Following shows the map-visualization of station complex in NYC.
+
+<img src="images/NYC_Metro.png" style="zoom: 33%; height: 500px; " /> 
+
+**Data catalog**: https://github.com/uctb/Urban-Dataset/tree/main/Public_Datasets/Metro
+
+|  **60-minutes**   |                    **New York City**                    |
+| :---------------: | :-----------------------------------------------------: |
+|     TimeRange     |                  2022.02.01-2023.12.21                  |
+|    TimeFitness    |                         60 mins                         |
+| TrafficNode.shape |                      (16512, 426)                       |
+| StationInfo.shape |                        [426, 5]                         |
+| TrafficGrid.shape |                           (0)                           |
+| GridLatLng.shape  |                           [0]                           |
+|     download      | [11.9M](./Public_Datasets/Metro/60_minutes/Metro_NYC.zip) |
+
+
 
 ## How to load the data?
 
