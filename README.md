@@ -9,6 +9,7 @@ Currently, UCTB offers the following datasets in 5 scenarios, with detailed info
 |   Bike-sharing   |          NYC           | 2013.07.01-2017.09.30 | 5 & 60 mins  | [5 mins](https://github.com/uctb/Urban-Dataset/blob/main/Public_Datasets/Bike/5_minutes/Bike_NYC.zip)  [60 mins](https://github.com/uctb/Urban-Dataset/blob/main/Public_Datasets/Bike/60_minutes/Bike_NYC.zip) |
 |   Bike-sharing   |        Chicago         | 2013.07.01-2017.09.30 | 5 & 60 mins  | [5 mins](https://github.com/uctb/Urban-Dataset/blob/main/Public_Datasets/Bike/5_minutes/Bike_Chicago.zip) [60 mins](https://github.com/uctb/Urban-Dataset/blob/main/Public_Datasets/Bike/60_minutes/Bike_Chicago.zip) |
 |   Bike-sharing   |           DC           | 2013.07.01-2017.09.30 | 5 & 60 mins  | [5 mins](https://github.com/uctb/Urban-Dataset/blob/main/Public_Datasets/Bike/5_minutes/Bike_DC.zip) [60 mins](https://github.com/uctb/Urban-Dataset/blob/main/Public_Datasets/Bike/60_minutes/Bike_DC.zip) |
+|   Bus            |           NYC          | 2022.02.01-2024.01.13 |   60 mins    | [60 mins](https://github.com/uctb/Urban-Dataset/blob/main/Public_Datasets/Bus/60_minutes/Bus_NYC.zip) |
 |  Vehicle Speed   |           LA           | 2012.03.01-2012.06.28 |    5 mins    | [5 mins](https://github.com/uctb/Urban-Dataset/blob/main/Public_Datasets/Speed/5_minutes/METR_LA.zip) |
 |  Vehicle Speed   |          BAY           | 2017.01.01-2017.07.01 |    5 mins    | [5 mins](https://github.com/uctb/Urban-Dataset/blob/main/Public_Datasets/Speed/5_minutes/PEMS_BAY.zip) |
 | Pedestrian Count |       Melbourne        | 2021.01.01-2022.11.01 |   60 mins    | [60 mins](https://github.com/uctb/Urban-Dataset/blob/main/Public_Datasets/Pedestrian/60_minutes/Pedestrian_Melbourne.zip) |
@@ -46,6 +47,29 @@ The following shows the map visualization of bike stations in NYC, Chicago, and 
 | TrafficGrid.shape |                     (37248, 20, 20)                     |                       (37248, 20, 20)                       |                    (37248, 20, 20)                     |
 | GridLatLng.shape  |                         [21, 2]                         |                           [21, 2]                           |                        [21, 2]                         |
 |     download      | [20.5M](./Public_Datasets/Bike/60_minutes/Bike_NYC.zip) | [11.0M](./Public_Datasets/Bike/60_minutes/Bike_Chicago.zip) | [10.7M](./Public_Datasets/Bike/60_minutes/Bike_DC.zip) |
+
+
+## Bus Datasets
+
+The bus datasets are collected from [DATA.NY.GOV: MTA Bus Hourly Ridership](https://data.ny.gov/Transportation/MTA-Bus-Hourly-Ridership-Beginning-February-2022/kv7t-n8in/about_data). This dataset is provided by the Metropolitan Transportation Authority and is available for public download. It offers bus ridership estimates on an hourly basis by bus route. Data collection started from February 2022 and has been regularly updated. The Bus_NYC dataset includes data up to January 13, 2024. The latest version can be accessed on the website mentioned above. The station info data is downloaded from [NYU | Faculty Digital Archive: New York City Bus Routes, Dec 2019](https://archive.nyu.edu/handle/2451/60058). It does not encompass all bus routes. So we discarded the traffic data for bus routes where station information was not found, ultimately retaining 226 bus routes.
+
+Following shows the map-visualization of Bus_NYC datasets.
+
+<img src="images/NYC_Bus.png" style="zoom: 28%" /> 
+
+**Data catalog**: https://github.com/uctb/Urban-Dataset/tree/main/Public_Datasets/Bus
+
+|  **60-minutes**   |                    **New York City**                    |
+| :---------------: | :-----------------------------------------------------: |
+|     TimeRange     |                  2022.02.01-2024.1.13                   |
+|    TimeFitness    |                         60 mins                         |
+| TrafficNode.shape |                      (17064, 226)                       |
+| StationInfo.shape |                        [226, 5]                         |
+| TrafficGrid.shape |                           (0)                           |
+| GridLatLng.shape  |                           [0]                           |
+|     download      | [4.9M](./Public_Datasets/Bus/60_minutes/Bus_NYC.zip) |
+
+
 
 ##  Speed Datasets
 
