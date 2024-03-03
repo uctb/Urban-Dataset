@@ -196,6 +196,8 @@ Following shows the map-visualization of station complex in Luzern.
 
 <img src="images/Luzern_Flow_Speed.png" style="zoom: 30%;"/>
 
+**Data catalog**: https://github.com/uctb/Urban-Dataset/tree/main/Public_Datasets/Flow_Speed
+
 |   **3-minutes**   |                         **Luzern**                         |
 | :---------------: | :--------------------------------------------------------: |
 |     TimeRange     |                   2015.01.01-2016.01.01                    |
@@ -205,8 +207,6 @@ Following shows the map-visualization of station complex in Luzern.
 | TrafficGrid.shape |                            (0)                             |
 | GridLatLng.shape  |                            [0]                             |
 |     download      | [20.9M](./Public_Datasets/Flow_Speed/3_minutes/Luzern.zip) |
-
-**Data catalog**: https://github.com/uctb/Urban-Dataset/tree/main/Public_Datasets/Flow_Speed
 
 
 
