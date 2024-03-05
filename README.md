@@ -17,7 +17,7 @@ Currently, UCTB offers the following datasets in 7 scenarios, with detailed info
 |   Ride-sharing   | Chicago (census tract) | 2013.01.01-2018.01.01 |   15 mins    | [15 mins](https://github.com/uctb/Urban-Dataset/blob/main/Public_Datasets/Taxi/15_minutes/Taxi_fine_grained_Chicago.zip) |
 |   Ride-sharing   |          NYC           | 2009.01.01-2023.06.01 |    5 mins    | [5 mins](https://github.com/uctb/Urban-Dataset/blob/main/Public_Datasets/Taxi/5_minutes/Taxi_NYC.zip) |
 |      Metro       |          NYC           | 2022.02.01-2023.12.21 |   60 mins    | [60 mins](https://github.com/uctb/Urban-Dataset/blob/main/Public_Datasets/Metro/60_minutes/Metro_NYC.zip) |
-|    Flow Speed    |         Luzern         | 2015.01.01-2016.01.01 |    3 mins    | [3 mins](https://github.com/uctb/Urban-Dataset/blob/main/Public_Datasets/Flow/3_minutes/Luzern.zip) |
+|   Traffic Flow   |         Luzern         | 2015.01.01-2016.01.01 |    3 mins    | [3 mins](https://github.com/uctb/Urban-Dataset/blob/main/Public_Datasets/Flow/3_minutes/Flow_Luzern.zip) |
 
 ## Bike Datasets
 
@@ -190,7 +190,7 @@ Following shows the map-visualization of station complex in NYC.
 
 ## Flow Speed Datasets
 
-The flow speed datasets are collected from [UTD19 - Research Collection](https://www.research-collection.ethz.ch/handle/20.500.11850/437802). UTD19 is a large-scale traffic data set from over 20000 stationary detectors on urban roads in 40 cities worldwide making it the largest multi-city traffic data set publically available. In our dataset, we only consider the data for the city of Luzern. The dataset enriched location information of sensors with further attributes describing the location of the sensor with respect to the road network.
+The traffic flow datasets are collected from [UTD19 - Research Collection](https://www.research-collection.ethz.ch/handle/20.500.11850/437802). UTD19 is a large-scale traffic data set from over 20000 stationary detectors on urban roads in 40 cities worldwide making it the largest multi-city traffic data set publically available. In our dataset, we only consider the data for the city of Luzern. The dataset enriched location information of sensors with further attributes describing the location of the sensor with respect to the road network.
 
 Following shows the map-visualization of station complex in Luzern.
 
@@ -198,15 +198,15 @@ Following shows the map-visualization of station complex in Luzern.
 
 **Data catalog**: https://github.com/uctb/Urban-Dataset/tree/main/Public_Datasets/Flow
 
-|   **3-minutes**   |                      **Luzern**                      |
-| :---------------: | :--------------------------------------------------: |
-|     TimeRange     |                2015.01.01-2016.01.01                 |
-|    TimeFitness    |                        3 mins                        |
-| TrafficNode.shape |                    (175200, 140)                     |
-| StationInfo.shape |                      [23626, 5]                      |
-| TrafficGrid.shape |                         (0)                          |
-| GridLatLng.shape  |                         [0]                          |
-|     download      | [20.9M](./Public_Datasets/Flow/3_minutes/Luzern.zip) |
+|   **3-minutes**   |                        **Luzern**                         |
+| :---------------: | :-------------------------------------------------------: |
+|     TimeRange     |                   2015.01.01-2016.01.01                   |
+|    TimeFitness    |                          3 mins                           |
+| TrafficNode.shape |                       (175200, 140)                       |
+| StationInfo.shape |                        [23626, 5]                         |
+| TrafficGrid.shape |                            (0)                            |
+| GridLatLng.shape  |                            [0]                            |
+|     download      | [20.9M](./Public_Datasets/Flow/3_minutes/Flow_Luzern.zip) |
 
 
 
