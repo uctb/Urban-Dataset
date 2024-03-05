@@ -17,7 +17,7 @@ Currently, UCTB offers the following datasets in 7 scenarios, with detailed info
 |   Ride-sharing   | Chicago (census tract) | 2013.01.01-2018.01.01 |   15 mins    | [15 mins](https://github.com/uctb/Urban-Dataset/blob/main/Public_Datasets/Taxi/15_minutes/Taxi_fine_grained_Chicago.zip) |
 |   Ride-sharing   |          NYC           | 2009.01.01-2023.06.01 |    5 mins    | [5 mins](https://github.com/uctb/Urban-Dataset/blob/main/Public_Datasets/Taxi/5_minutes/Taxi_NYC.zip) |
 |      Metro       |          NYC           | 2022.02.01-2023.12.21 |   60 mins    | [60 mins](https://github.com/uctb/Urban-Dataset/blob/main/Public_Datasets/Metro/60_minutes/Metro_NYC.zip) |
-|    Flow Speed    |         Luzern         | 2015.01.01-2016.01.01 |    3 mins    | [3 mins](https://github.com/uctb/Urban-Dataset/blob/main/Public_Datasets/Flow_Speed/3_minutes/Luzern.zip) |
+|    Flow Speed    |         Luzern         | 2015.01.01-2016.01.01 |    3 mins    | [3 mins](https://github.com/uctb/Urban-Dataset/blob/main/Public_Datasets/Flow/3_minutes/Luzern.zip) |
 
 ## Bike Datasets
 
@@ -194,19 +194,19 @@ The flow speed datasets are collected from [UTD19 - Research Collection](https:/
 
 Following shows the map-visualization of station complex in Luzern.
 
-<img src="images/Luzern_Flow_Speed.png" style="zoom: 30%;"/>
+<img src="images/Luzern_Flow.png" style="zoom: 30%;"/>
 
-**Data catalog**: https://github.com/uctb/Urban-Dataset/tree/main/Public_Datasets/Flow_Speed
+**Data catalog**: https://github.com/uctb/Urban-Dataset/tree/main/Public_Datasets/Flow
 
-|   **3-minutes**   |                         **Luzern**                         |
-| :---------------: | :--------------------------------------------------------: |
-|     TimeRange     |                   2015.01.01-2016.01.01                    |
-|    TimeFitness    |                           3 mins                           |
-| TrafficNode.shape |                       (175200, 140)                        |
-| StationInfo.shape |                         [23626, 5]                         |
-| TrafficGrid.shape |                            (0)                             |
-| GridLatLng.shape  |                            [0]                             |
-|     download      | [20.9M](./Public_Datasets/Flow_Speed/3_minutes/Luzern.zip) |
+|   **3-minutes**   |                      **Luzern**                      |
+| :---------------: | :--------------------------------------------------: |
+|     TimeRange     |                2015.01.01-2016.01.01                 |
+|    TimeFitness    |                        3 mins                        |
+| TrafficNode.shape |                    (175200, 140)                     |
+| StationInfo.shape |                      [23626, 5]                      |
+| TrafficGrid.shape |                         (0)                          |
+| GridLatLng.shape  |                         [0]                          |
+|     download      | [20.9M](./Public_Datasets/Flow/3_minutes/Luzern.zip) |
 
 
 
