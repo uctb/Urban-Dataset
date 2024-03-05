@@ -2,21 +2,22 @@
 
 ## Datasets Overview
 
-Currently, UCTB offers the following datasets in 5 scenarios, with detailed information provided in the table below. We are constantly working to release more datasets in the future.
+Currently, UCTB offers the following datasets in 7 scenarios, with detailed information provided in the table below. We are constantly working to release more datasets in the future.
 
 | **Application**  |        **City**        |       Time Span       | **Interval** |                           **Link**                           |
 | :--------------: | :--------------------: | :-------------------: | :----------: | :----------------------------------------------------------: |
 |   Bike-sharing   |          NYC           | 2013.07.01-2017.09.30 | 5 & 60 mins  | [5 mins](https://github.com/uctb/Urban-Dataset/blob/main/Public_Datasets/Bike/5_minutes/Bike_NYC.zip)  [60 mins](https://github.com/uctb/Urban-Dataset/blob/main/Public_Datasets/Bike/60_minutes/Bike_NYC.zip) |
 |   Bike-sharing   |        Chicago         | 2013.07.01-2017.09.30 | 5 & 60 mins  | [5 mins](https://github.com/uctb/Urban-Dataset/blob/main/Public_Datasets/Bike/5_minutes/Bike_Chicago.zip) [60 mins](https://github.com/uctb/Urban-Dataset/blob/main/Public_Datasets/Bike/60_minutes/Bike_Chicago.zip) |
 |   Bike-sharing   |           DC           | 2013.07.01-2017.09.30 | 5 & 60 mins  | [5 mins](https://github.com/uctb/Urban-Dataset/blob/main/Public_Datasets/Bike/5_minutes/Bike_DC.zip) [60 mins](https://github.com/uctb/Urban-Dataset/blob/main/Public_Datasets/Bike/60_minutes/Bike_DC.zip) |
-|   Bus            |           NYC          | 2022.02.01-2024.01.13 |   60 mins    | [60 mins](https://github.com/uctb/Urban-Dataset/blob/main/Public_Datasets/Bus/60_minutes/Bus_NYC.zip) |
+|       Bus        |          NYC           | 2022.02.01-2024.01.13 |   60 mins    | [60 mins](https://github.com/uctb/Urban-Dataset/blob/main/Public_Datasets/Bus/60_minutes/Bus_NYC.zip) |
 |  Vehicle Speed   |           LA           | 2012.03.01-2012.06.28 |    5 mins    | [5 mins](https://github.com/uctb/Urban-Dataset/blob/main/Public_Datasets/Speed/5_minutes/METR_LA.zip) |
 |  Vehicle Speed   |          BAY           | 2017.01.01-2017.07.01 |    5 mins    | [5 mins](https://github.com/uctb/Urban-Dataset/blob/main/Public_Datasets/Speed/5_minutes/PEMS_BAY.zip) |
 | Pedestrian Count |       Melbourne        | 2021.01.01-2022.11.01 |   60 mins    | [60 mins](https://github.com/uctb/Urban-Dataset/blob/main/Public_Datasets/Pedestrian/60_minutes/Pedestrian_Melbourne.zip) |
 |   Ride-sharing   |  Chicago (community)   | 2013.01.01-2018.01.01 |   15 mins    | [15 mins](https://github.com/uctb/Urban-Dataset/blob/main/Public_Datasets/Taxi/15_minutes/Taxi_Chicago.zip) |
 |   Ride-sharing   | Chicago (census tract) | 2013.01.01-2018.01.01 |   15 mins    | [15 mins](https://github.com/uctb/Urban-Dataset/blob/main/Public_Datasets/Taxi/15_minutes/Taxi_fine_grained_Chicago.zip) |
 |   Ride-sharing   |          NYC           | 2009.01.01-2023.06.01 |    5 mins    | [5 mins](https://github.com/uctb/Urban-Dataset/blob/main/Public_Datasets/Taxi/5_minutes/Taxi_NYC.zip) |
-|     Metro        |          NYC           | 2022.02.01-2023.12.21 |   60 mins    | [60 mins](https://github.com/uctb/Urban-Dataset/blob/main/Public_Datasets/Metro/60_minutes/Metro_NYC.zip) |
+|      Metro       |          NYC           | 2022.02.01-2023.12.21 |   60 mins    | [60 mins](https://github.com/uctb/Urban-Dataset/blob/main/Public_Datasets/Metro/60_minutes/Metro_NYC.zip) |
+|   Traffic Flow   |         Luzern         | 2015.01.01-2016.01.01 |    3 mins    | [3 mins](https://github.com/uctb/Urban-Dataset/blob/main/Public_Datasets/Flow/3_minutes/Flow_Luzern.zip) |
 
 ## Bike Datasets
 
@@ -186,6 +187,26 @@ Following shows the map-visualization of station complex in NYC.
 | TrafficGrid.shape |                           (0)                           |
 | GridLatLng.shape  |                           [0]                           |
 |     download      | [11.9M](./Public_Datasets/Metro/60_minutes/Metro_NYC.zip) |
+
+## Flow Speed Datasets
+
+The traffic flow datasets are collected from [UTD19 - Research Collection](https://www.research-collection.ethz.ch/handle/20.500.11850/437802). UTD19 is a large-scale traffic data set from over 20000 stationary detectors on urban roads in 40 cities worldwide making it the largest multi-city traffic data set publically available. In our dataset, we only consider the data for the city of Luzern. The dataset enriched location information of sensors with further attributes describing the location of the sensor with respect to the road network.
+
+Following shows the map-visualization of station complex in Luzern.
+
+<img src="images/Luzern_Flow.png" style="zoom: 30%;"/>
+
+**Data catalog**: https://github.com/uctb/Urban-Dataset/tree/main/Public_Datasets/Flow
+
+|   **3-minutes**   |                        **Luzern**                         |
+| :---------------: | :-------------------------------------------------------: |
+|     TimeRange     |                   2015.01.01-2016.01.01                   |
+|    TimeFitness    |                          3 mins                           |
+| TrafficNode.shape |                       (175200, 140)                       |
+| StationInfo.shape |                        [23626, 5]                         |
+| TrafficGrid.shape |                            (0)                            |
+| GridLatLng.shape  |                            [0]                            |
+|     download      | [20.9M](./Public_Datasets/Flow/3_minutes/Flow_Luzern.zip) |
 
 
 
