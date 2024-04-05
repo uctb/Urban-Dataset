@@ -18,6 +18,7 @@ Currently, UCTB offers the following datasets in 7 scenarios, with detailed info
 |   Ride-sharing   |          NYC           | 2009.01.01-2023.06.01 |    5 mins    | [5 mins](https://github.com/uctb/Urban-Dataset/blob/main/Public_Datasets/Taxi/5_minutes/Taxi_NYC.zip) |
 |      Metro       |          NYC           | 2022.02.01-2023.12.21 |   60 mins    | [60 mins](https://github.com/uctb/Urban-Dataset/blob/main/Public_Datasets/Metro/60_minutes/Metro_NYC.zip) |
 |   Traffic Flow   |         Luzern         | 2015.01.01-2016.01.01 |    3 mins    | [3 mins](https://github.com/uctb/Urban-Dataset/blob/main/Public_Datasets/Flow/3_minutes/Flow_Luzern.zip) |
+|   Traffic Flow   |         Hamburg        | 2016.08.27-2016.12.09 |    3 mins    | [3 mins](https://github.com/uctb/Urban-Dataset/blob/main/Public_Datasets/Flow/3_minutes/Flow_Hamburg.zip) |
 
 ## Bike Datasets
 
@@ -60,14 +61,14 @@ Following shows the map-visualization of Bus_NYC datasets.
 
 **Data catalog**: https://github.com/uctb/Urban-Dataset/tree/main/Public_Datasets/Bus
 
-|  **60-minutes**   |                    **New York City**                    |
-| :---------------: | :-----------------------------------------------------: |
-|     TimeRange     |                  2022.02.01-2024.1.13                   |
-|    TimeFitness    |                         60 mins                         |
-| TrafficNode.shape |                      (17064, 226)                       |
-| StationInfo.shape |                        [226, 5]                         |
-| TrafficGrid.shape |                           (0)                           |
-| GridLatLng.shape  |                           [0]                           |
+|  **60-minutes**   |                    **New York City**                 |
+| :---------------: | :--------------------------------------------------: |
+|     TimeRange     |                  2022.02.01-2024.01.13               |
+|    TimeFitness    |                         60 mins                      |
+| TrafficNode.shape |                      (17064, 226)                    |
+| StationInfo.shape |                        [226, 5]                      |
+| TrafficGrid.shape |                           (0)                        |
+| GridLatLng.shape  |                           [0]                        |
 |     download      | [4.9M](./Public_Datasets/Bus/60_minutes/Bus_NYC.zip) |
 
 
@@ -190,23 +191,23 @@ Following shows the map-visualization of station complex in NYC.
 
 ## Flow Speed Datasets
 
-The traffic flow datasets are collected from [UTD19 - Research Collection](https://www.research-collection.ethz.ch/handle/20.500.11850/437802). UTD19 is a large-scale traffic data set from over 20000 stationary detectors on urban roads in 40 cities worldwide making it the largest multi-city traffic data set publically available. In our dataset, we only consider the data for the city of Luzern. The dataset enriched location information of sensors with further attributes describing the location of the sensor with respect to the road network.
+The traffic flow datasets are collected from [UTD19 - Research Collection](https://www.research-collection.ethz.ch/handle/20.500.11850/437802). UTD19 is a large-scale traffic data set from over 20000 stationary detectors on urban roads in 40 cities worldwide making it the largest multi-city traffic data set publically available. In our dataset, we only consider the data for the city of Luzern, Switzerland and Hamburg, Germany. The dataset enriched location information of sensors with further attributes describing the location of the sensor with respect to the road network. Note that the `shape[1]` of the `StationInfo` in Hamburg is 6, instead of 5 in other datasets. The additional column is the `road` each sensor belongs to.
 
-Following shows the map-visualization of station complex in Luzern.
+Following shows the map-visualization of station complex in Luzern and Hamburg.
 
-<img src="images/Luzern_Flow.png" style="zoom: 30%;"/>
+<img src="images/Luzern_Flow.png" style="zoom: 30%; height: 600px;"/> <img src="images/Hamburg_Flow.png" style="zoom: 30%; height: 600px;"/>
 
 **Data catalog**: https://github.com/uctb/Urban-Dataset/tree/main/Public_Datasets/Flow
 
-|   **3-minutes**   |                        **Luzern**                         |
-| :---------------: | :-------------------------------------------------------: |
-|     TimeRange     |                   2015.01.01-2016.01.01                   |
-|    TimeFitness    |                          3 mins                           |
-| TrafficNode.shape |                       (175200, 140)                       |
-| StationInfo.shape |                        [23626, 5]                         |
-| TrafficGrid.shape |                            (0)                            |
-| GridLatLng.shape  |                            [0]                            |
-|     download      | [20.9M](./Public_Datasets/Flow/3_minutes/Flow_Luzern.zip) |
+|   **3-minutes**   |                        **Luzern**                         |                        **Hamburg**                         |
+| :---------------: | :-------------------------------------------------------: | :--------------------------------------------------------: |
+|     TimeRange     |                   2015.01.01-2016.01.01                   |                   2016.08.27-2016.12.09                    |
+|    TimeFitness    |                          3 mins                           |                          3 mins                            |
+| TrafficNode.shape |                       (175200, 140)                       |                       (49920, 392)                         |
+| StationInfo.shape |                        [23626, 5]                         |                        [392, 6]                            |
+| TrafficGrid.shape |                            (0)                            |                            (0)                             |
+| GridLatLng.shape  |                            [0]                            |                            [0]                             |
+|     download      | [20.9M](./Public_Datasets/Flow/3_minutes/Flow_Luzern.zip) | [14.8M](./Public_Datasets/Flow/3_minutes/Flow_Hamburg.zip) |
 
 
 
