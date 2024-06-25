@@ -162,11 +162,11 @@ Following shows the map-visualization of `Taxi_NYC` datasets.
 | :---------------: | :-------------------------------------------------------------------------------------------------------: |:---------------:|:---------------:|
 |     TimeRange     |2013.01.01-2018.01.01|2013.01.01-2018.01.01|2009.01.01-2023.06.01|
 |    TimeFitness    |15 mins|15 mins|5 mins|
-| TrafficNode.shape |                                               (175296, 77)                                               |(175296, 121)|(779904, 263)|
+| TrafficNode.shape |                                               (175296, 77)                                               |(175296, 121)|(1516032, 263)|
 | StationInfo.shape |                                                 [77,5]                                                  |[121,5]|[263,5]|
 | TrafficGrid.shape |                                              (0)                                              |(0)|(0)|
 | GridLatLng.shape  |                                                  [0]                                                   |[0]|[0]|
-|       Size        | [6.06M](https://github.com/uctb/Urban-Dataset/blob/main/Public_Datasets/Taxi/15_minutes/Taxi_Chicago.zip) |[10.0M](https://github.com/uctb/Urban-Dataset/blob/main/Public_Datasets/Taxi/15_minutes/Taxi_fine_grained_Chicago.zip)|[36.5M](https://github.com/uctb/Urban-Dataset/blob/main/Public_Datasets/Taxi/5_minutes/Taxi_NYC.zip)|
+|       Size        | [6.06M](https://github.com/uctb/Urban-Dataset/blob/main/Public_Datasets/Taxi/15_minutes/Taxi_Chicago.zip) |[10.0M](https://github.com/uctb/Urban-Dataset/blob/main/Public_Datasets/Taxi/15_minutes/Taxi_fine_grained_Chicago.zip)|[208.7M](https://pan.baidu.com/s/19iUVCTqgAvJJf0pgHVyZMQ?pwd=gw6p)|
 
 
 ## Metro Datasets
